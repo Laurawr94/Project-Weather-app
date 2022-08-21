@@ -1,0 +1,13 @@
+body {
+  margin: 0 auto;
+}
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+}
+#search {
+  background-color: aquamarine;
+}
+#search:hover {
+}
