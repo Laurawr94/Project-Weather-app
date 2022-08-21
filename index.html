@@ -13,9 +13,98 @@
 
 <body>
     <div class="container">
+        <form id="searchengineer">
+            <div class="row">
+                <div class="col-7">
+                    <input type="search" placeholder="Change city here..." id="search" size="28cm"
+                        class="form-control" />
+                </div>
+                <div class="col-1">
+                    <input type="submit" class="searchButton" value="Search" class="form-control" </div>
+        </form>
+        </br>
         <h1>
-            Hello World
+            Cairns
         </h1>
+        <h2>
+            🌤️21°
+        </h2>
+        <span class="celsiusFahrenheit">
+            <a href="#" id="celsius">℃</a> |
+            <a href="#" id="fahrenheit">℉</a>
+        </span>
+        <div class="col-3 second">
+            <span class="currentTimePrediction">
+                <ul>
+                    </br>
+                    <li id="currentDayTime">Friday 7:00</li>
+                    <li id="dayDescription">Mostly cloudy</li>
+                </ul>
+            </span>
+        </div>
+        <div class="col-3 third">
+            <span class="currentAddInfo">
+                <ul>
+                    </br>
+                    <li>Feels Like: <span class="feelsLike">21°</span></li>
+                    <li>Humidity: <span class="humidity">68%</span></li>
+                    <li>Wind: <span class="windSpeed">14</span></li>
+                </ul>
+            </span>
+        </div>
+        <p>
+            📆 7-Day Forecast
+        </p>
+        </br>
+        <div class="row prediction">
+            <div class="col-2">
+                <span class="day">THU</span>
+                </br>
+                🌧️
+                </br>
+                <span class="predTemp">23°|17°</span>
+            </div>
+            <div class="col-2">
+                <span class="day">SAT</span>
+                </br>
+                ⛅
+                </br>
+                <span class="predTemp">24°|18°</span>
+            </div>
+            <div class="col-2">
+                <span class="day">SUN</span>
+                </br>
+                ⛅
+                </br>
+                <span class="predTemp">24°|18°</span>
+            </div>
+            <div class="col-2">
+                <span class="day">MON</span>
+                </br>
+                ⛅
+                </br>
+                <span class="predTemp">25°|17°</span>
+            </div>
+            <div class="col-2">
+                <span class="day">TUE</span>
+                </br>
+                ⛅
+                </br>
+                <span class="predTemp">25°|17°</span>
+            </div>
+            <div class="col-2">
+                <span class="day">WED</span>
+                </br>
+                ⛅
+                </br>
+                <span class="predTemp">25°|17°</span>
+            </div>
+            </br>
+        </div>
+        </br>
+        <div class="codedBy">
+            <span>Coded by Laura Doherty</span>
+        </div>
     </div>
 </body>
 <script src="src/app.js"></script>
