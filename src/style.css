@@ -1,12 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-.weatherBorder {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 2px solid grey;
-}
 h1 {
   color: #878787;
   font-size: 24px;
@@ -26,4 +20,24 @@ li {
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
+}
+.weatherWrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.weatherBorder {
+  padding: 20px;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+.overview {
+  margin-bottom: 20px;
+}
+.weather-temp img {
+  margin-right: 10px;
+  height: 64px;
+  width: 64px;
+}
+.currentTemp {
+  color: blue;
 }
