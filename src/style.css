@@ -38,6 +38,6 @@ li {
   height: 64px;
   width: 64px;
 }
-.currentTemp {
+.weather-temp strong {
   color: blue;
 }
