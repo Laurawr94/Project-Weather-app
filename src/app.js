@@ -64,6 +64,8 @@ function searchSubmit(event) {
 
 function calculateFahrenheit(event) {
   event.preventDefault();
+  celsiusSelected.classList.remove("active");
+  fahrenheitSelected.classList.add("active");
   document.querySelector("#temperature").innerHTML = Math.round(
     (celsiusTemp * 9) / 5 + 32
   );
@@ -71,6 +73,8 @@ function calculateFahrenheit(event) {
 
 function calculateCelsius(event) {
   event.preventDefault();
+  celsiusSelected.classList.add("active");
+  fahrenheitSelected.classList.remove("active");
   document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
 }
 
