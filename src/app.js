@@ -22,9 +22,8 @@ function formatDate(timeStamp) {
 }
 
 function currentTemp(response) {
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemp = response.data.main.temp;
+  document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#current-description").innerHTML =
     response.data.weather[0].description;
@@ -62,7 +61,28 @@ function searchSubmit(event) {
   let cityInput = document.querySelector("#city-input");
   search(cityInput.value);
 }
-search("Cairns");
+
+function calculateFahrenheit(event) {
+  event.preventDefault();
+  document.querySelector("#temperature").innerHTML = Math.round(
+    (celsiusTemp * 9) / 5 + 32
+  );
+}
+
+function calculateCelsius(event) {
+  event.preventDefault();
+  document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchSubmit);
+
+let fahrenheitSelected = document.querySelector("#fahrenheit-link");
+fahrenheitSelected.addEventListener("click", calculateFahrenheit);
+
+let celsiusSelected = document.querySelector("#celsius-link");
+celsiusSelected.addEventListener("click", calculateCelsius);
+
+search("Cairns");
