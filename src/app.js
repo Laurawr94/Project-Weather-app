@@ -36,9 +36,21 @@ function currentTemp(response) {
   document.querySelector(".dateTime").innerHTML = formatDate(
     response.data.dt * 1000
   );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "alt",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+    );
 }
 
-let cityName = `London`;
+let cityName = `Cairns`;
 let apiKey = `08609be667e09eedb6d9f6006bdd29fa`;
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
