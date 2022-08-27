@@ -15,15 +15,26 @@
     <div class="container">
         <div class="weatherWrapper">
             <div class="weatherBorder">
+                <form id="search-form" class="mb-3">
+                    <div class="row">
+                        <div class="col-9">
+                            <input type="search" placeholder="Change City here..." class="form-control" id="city-input"
+                                autocomplete="off" />
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" value="Search" class="btn btn-primary" width="100px" />
+                        </div>
+                    </div>
+                </form>
                 <div class="overview">
-                    <h1 id="currentCity">
+                    <h1 id="current-city">
                         Cairns
                     </h1>
                     <ul>
                         <li>
                             Updated: <span class="dateTime">Friday 05:00</span>
                         </li>
-                        <li id="currentDescription">
+                        <li id="current-description">
                             Clear
                         </li>
                     </ul>
