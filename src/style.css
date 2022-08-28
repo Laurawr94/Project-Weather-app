@@ -1,12 +1,21 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+  margin: 0;
+  padding: 0;
 }
 h1 {
-  color: #878787;
-  font-size: 24px;
+  color: white;
+  font-size: 38px;
+  font-family: "Mulish", sans-serif;
   font-weight: 100px;
   line-height: 29px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  padding-left: 20px;
 }
 ul {
   margin: 0;
@@ -16,13 +25,21 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: rbg(135, 135, 135);
-  font-size: 16px;
+  color: white;
   font-weight: 100;
   line-height: 19px;
 }
 li:first-letter {
   text-transform: capitalize;
+}
+.currentList {
+  padding-left: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 18px;
+}
+.currentListMore {
+  font-family: "Mulish", sans-serif;
+  font-size: 15px;
 }
 a {
   text-decoration: none;
@@ -31,10 +48,55 @@ a {
   max-width: 600px;
   margin: 30px auto;
 }
-.weatherBorder {
+.weather {
+  position: relative;
+  margin: 10% auto 0;
+  width: 90%;
   padding: 20px;
-  border: 2px solid grey;
-  border-radius: 5px;
+  height: 300px;
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+}
+.border::before,
+.border::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #e6fb04,
+    #ff6600,
+    #00ff66,
+    #00ffff,
+    #ff00ff,
+    #ff0099,
+    #6e0dd0,
+    #ff3300,
+    #099fff
+  );
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.border::after {
+  filter: blur(40px);
 }
 .overview {
   margin-bottom: 20px;
@@ -45,7 +107,7 @@ a {
   width: 64px;
 }
 .weather-temp strong {
-  color: rbg(33, 33, 33);
+  color: black;
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
@@ -56,9 +118,43 @@ a {
   top: -34px;
 }
 .weather-temp .active {
-  color: black;
+  color: white;
   cursor: default;
 }
 .weather-temp .active:hover {
   text-decoration: none;
+}
+#temperature {
+  color: white;
+}
+p {
+  color: white;
+  font-size: 12px;
+  text-align: right;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.button {
+  font-size: 20px;
+  font-family: "Mulish", sans-serif;
+  color: #ff00cc;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+}
+#city-input {
+  background-color: transparent;
+  border: 1px solid white;
+  font-family: "Mulish", sans-serif;
+  height: 30px;
+}
+.col-9 {
+  padding-right: 0px;
+  padding-bottom: 10px;
+}
+.col-3 {
+  padding-right: 10px;
+  padding-left: 0px;
 }
