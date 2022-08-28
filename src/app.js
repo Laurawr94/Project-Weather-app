@@ -77,8 +77,31 @@ function calculateCelsius(event) {
   fahrenheitSelected.classList.remove("active");
   document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
 }
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" width="36" />
+        <div class="weather-forecast-temp">
+            <span class="weather-forecast-temp-max">24°</span> |
+            <span class="weather-forecast-temp-min">18°</span>
+        </div>
+      </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+
+  document.querySelector("#forecast").innerHTML = forecastHTML;
+}
 
 let celsiusTemp = null;
+
+displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchSubmit);
