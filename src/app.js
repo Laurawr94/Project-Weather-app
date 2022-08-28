@@ -66,20 +66,6 @@ function searchSubmit(event) {
   let cityInput = document.querySelector("#city-input");
   search(cityInput.value);
 }
-function calculateFahrenheit(event) {
-  event.preventDefault();
-  celsiusSelected.classList.remove("active");
-  fahrenheitSelected.classList.add("active");
-  document.querySelector("#temperature").innerHTML = Math.round(
-    (celsiusTemp * 9) / 5 + 32
-  );
-}
-function calculateCelsius(event) {
-  event.preventDefault();
-  celsiusSelected.classList.add("active");
-  fahrenheitSelected.classList.remove("active");
-  document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
-}
 function formatDay(timeStamp) {
   let date = new Date(timeStamp * 1000);
   let day = date.getDay();
@@ -116,16 +102,7 @@ function displayForecast(response) {
 
   document.querySelector("#forecast").innerHTML = forecastHTML;
 }
-
-let celsiusTemp = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchSubmit);
-
-let fahrenheitSelected = document.querySelector("#fahrenheit-link");
-fahrenheitSelected.addEventListener("click", calculateFahrenheit);
-
-let celsiusSelected = document.querySelector("#celsius-link");
-celsiusSelected.addEventListener("click", calculateCelsius);
 
 search("Cairns");
