@@ -99,7 +99,7 @@ a {
   filter: blur(40px);
 }
 .overview {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .weather-temp {
   text-align: center;
@@ -120,13 +120,6 @@ a {
   font-size: 16px;
   top: -34px;
 }
-.weather-temp .active {
-  color: white;
-  cursor: default;
-}
-.weather-temp .active:hover {
-  text-decoration: none;
-}
 #temperature {
   color: white;
 }
@@ -134,12 +127,12 @@ p {
   color: white;
   font-size: 12px;
   text-align: right;
-  padding: 0;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  position: relative;
+  right: 48px;
+  bottom: 27px;
 }
 .button {
-  font-size: 20px;
+  font-size: 24px;
   font-family: "Mulish", sans-serif;
   color: #ff00cc;
   text-transform: capitalize;
@@ -152,6 +145,10 @@ p {
   border: 1px solid white;
   font-family: "Mulish", sans-serif;
   height: 30px;
+}
+#city-input:hover {
+  background-color: white;
+  color: #ff0099;
 }
 .weather-forecast {
   color: white;
@@ -180,4 +177,33 @@ p {
 .col-6 {
   text-align: center;
   color: white;
+}
+.currentDateTime {
+  position: relative;
+  top: 5px;
+  left: 20px;
+}
+#current-description {
+  position: relative;
+  top: 7px;
+  left: 30px;
+}
+#icon {
+  position: relative;
+  right: -35px;
+  top: 15px;
+}
+.units {
+  position: relative;
+  right: -22px;
+  top: 13px;
+}
+#temperature {
+  position: relative;
+  right: -25px;
+  top: 10px;
+}
+#forecast.weather-forecast {
+  position: relative;
+  top: 26px;
 }
